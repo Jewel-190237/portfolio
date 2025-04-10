@@ -12,6 +12,8 @@ import {
   FaLinux,
   FaFigma,
   FaAws,
+  FaWordpress,
+  FaMagic,
 } from "react-icons/fa";
 import {
   SiNextdotjs,
@@ -26,11 +28,17 @@ import {
   SiFirebase,
   SiVercel,
   SiVite,
+  SiOverleaf,
+  SiAntdesign,
+  SiDaisyui,
+  SiMaterialdesignicons,
 } from "react-icons/si";
 import { TbBrandVscode } from "react-icons/tb";
 import { BsFileEarmarkCode, BsGrid1X2 } from "react-icons/bs";
 import { MdAnimation } from "react-icons/md";
 import { FcWorkflow } from "react-icons/fc";
+import { AuroraText } from "@/components/magicui/aurora-text";
+import { TypingAnimation } from "@/components/magicui/typing-animation";
 
 const SkillCard = ({ icon: Icon, title, skills, color }) => (
   <Card className="group relative overflow-hidden bg-gray-900/80 border-gray-700 hover:scale-[1.02] transition-all duration-300 hover:shadow-xl hover:shadow-blue-500/20">
@@ -103,26 +111,31 @@ const SkillsSection = () => {
           name: "Node.js",
           icon: <FaNodeJs className="w-4 h-4 text-[#339933]" />,
         },
-        {
-          name: "Python",
-          icon: <FaPython className="w-4 h-4 text-[#3776AB]" />,
-        },
-        {
-          name: "PostgreSQL",
-          icon: <SiPostgresql className="w-4 h-4 text-[#336791]" />,
-        },
+        // {
+        //   name: "Python",
+        //   icon: <FaPython className="w-4 h-4 text-[#3776AB]" />,
+        // },
+        // {
+        //   name: "PostgreSQL",
+        //   icon: <SiPostgresql className="w-4 h-4 text-[#336791]" />,
+        // },
         {
           name: "MongoDB",
           icon: <SiMongodb className="w-4 h-4 text-[#47A248]" />,
         },
         {
+          name: "Express.js",
+          icon: <BsFileEarmarkCode className="w-4 h-4 text-[#2da1e4]" />,
+        },
+          // icon: <SiMongodb className="w-4 h-4 text-[#47A248]" />,
+        {
           name: "REST APIs",
           icon: <BsGrid1X2 className="w-4 h-4 text-[#FF6C37]" />,
         },
-        {
-          name: "GraphQL",
-          icon: <SiGraphql className="w-4 h-4 text-[#E10098]" />,
-        },
+        // {
+        //   name: "GraphQL",
+        //   icon: <SiGraphql className="w-4 h-4 text-[#E10098]" />,
+        // },
       ],
     },
     {
@@ -136,13 +149,18 @@ const SkillsSection = () => {
           icon: <Layout className="w-4 h-4 text-[#38B2AC]" />,
         },
         {
-          name: "Wireframing",
-          icon: <BsGrid1X2 className="w-4 h-4 text-[#9CA3AF]" />,
+          name: "WordPress",
+          icon: <FaWordpress className="w-4 h-4 text-[#eee130]" />,
+          // icon: <Layout className="w-4 h-4 text-[#38B2AC]" />,
         },
-        {
-          name: "Prototyping",
-          icon: <MdAnimation className="w-4 h-4 text-[#F59E0B]" />,
-        },
+        // {
+        //   name: "Wireframing",
+        //   icon: <BsGrid1X2 className="w-4 h-4 text-[#9CA3AF]" />,
+        // },
+        // {
+        //   name: "Prototyping",
+        //   icon: <MdAnimation className="w-4 h-4 text-[#F59E0B]" />,
+        // },
       ],
     },
     {
@@ -151,15 +169,15 @@ const SkillsSection = () => {
       color: "text-orange-400",
       skills: [
         { name: "AWS", icon: <FaAws className="w-4 h-4 text-[#FF9900]" /> },
-        {
-          name: "Docker",
-          icon: <FaDocker className="w-4 h-4 text-[#2496ED]" />,
-        },
+        // {
+        //   name: "Docker",
+        //   icon: <FaDocker className="w-4 h-4 text-[#2496ED]" />,
+        // },
         { name: "CI/CD", icon: <FcWorkflow className="w-4 h-4" /> },
-        {
-          name: "Kubernetes",
-          icon: <BsGrid1X2 className="w-4 h-4 text-[#326CE5]" />,
-        },
+        // {
+        //   name: "Kubernetes",
+        //   icon: <BsGrid1X2 className="w-4 h-4 text-[#326CE5]" />,
+        // },
         { name: "Git", icon: <FaGitAlt className="w-4 h-4 text-[#F05032]" /> },
         { name: "Linux", icon: <FaLinux className="w-4 h-4 text-[#FCC624]" /> },
       ],
@@ -173,11 +191,11 @@ const SkillsSection = () => {
           name: "VS Code",
           icon: <TbBrandVscode className="w-4 h-4 text-[#007ACC]" />,
         },
-        { name: "Jest", icon: <SiJest className="w-4 h-4 text-[#C21325]" /> },
-        {
-          name: "Webpack",
-          icon: <SiWebpack className="w-4 h-4 text-[#8DD6F9]" />,
-        },
+        // { name: "Jest", icon: <SiJest className="w-4 h-4 text-[#C21325]" /> },
+        // {
+        //   name: "Webpack",
+        //   icon: <SiWebpack className="w-4 h-4 text-[#8DD6F9]" />,
+        // },
         { name: "Redux", icon: <SiRedux className="w-4 h-4 text-[#764ABC]" /> },
         {
           name: "Firebase",
@@ -197,27 +215,44 @@ const SkillsSection = () => {
           icon: <MdAnimation className="w-4 h-4 text-[#FF4081]" />,
         },
         {
-          name: "SVG Animation",
-          icon: <MdAnimation className="w-4 h-4 text-[#00C853]" />,
+          name: "LaTex",
+          icon: <SiOverleaf className="w-4 h-4 text-[#00C853]" />,
+        },
+        // {
+        //   name: "3D Modeling",
+        //   icon: <Cpu className="w-4 h-4 text-[#7C4DFF]" />,
+        // },
+        {
+          name: "Ant Design",
+          icon: <SiAntdesign className="w-4 h-4 text-[#00c3ff]" />,
         },
         {
-          name: "3D Modeling",
-          icon: <Cpu className="w-4 h-4 text-[#7C4DFF]" />,
+          name: "DaisyUI",
+          icon: <SiDaisyui className="w-4 h-4 text-[#0026ff]" />,
         },
         {
-          name: "Motion Graphics",
-          icon: <MdAnimation className="w-4 h-4 text-[#FF6D00]" />,
+          name: "Material UI",
+          icon: <SiMaterialdesignicons className="w-4 h-4 text-[#ea00ff]" />,
+        },
+        {
+          name: "Magic UI",
+          icon: <FaMagic className="w-4 h-4 text-[#ff4800]" />,
         },
       ],
     },
   ];
 
   return (
-    <main className="pt-15 lg:pt-0 text-white min-h-screen bg-[#04081A] relative">
+    <main className="pt-32 pb-20 text-white min-h-screen bg-[#04081A] relative">
       {/* Grid Background */}
+      <div className="mx-auto max-w-5xl px-6 text-center">
+        <h1 className="text-4xl text-center font-bold tracking-tighter md:text-5xl lg:text-7xl">
+          <AuroraText className="font-bold">My Skills</AuroraText>
+        </h1>
+        <TypingAnimation className='text-xl md:text-2xl mt-3'>Explore My Skills</TypingAnimation>
+      </div>
       <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
-
-      <section className="container mx-auto px-4 py-11 relative z-10">
+      <section className="container mx-auto px-4 relative z-10">
         <div className="flex justify-center items-center ">
           <IconCloudDemo />
         </div>

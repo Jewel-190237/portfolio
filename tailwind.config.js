@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       animation: {
         meteor: "meteor 5s linear infinite",
+        aurora: 'aurora 10s ease-in-out infinite',
       },
       keyframes: {
         meteor: {
@@ -20,6 +21,10 @@ module.exports = {
             transform: "rotate(215deg) translateX(-500px)",
             opacity: "0",
           },
+        },
+        aurora: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
         },
       },
       borderRadius: {

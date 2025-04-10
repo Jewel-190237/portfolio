@@ -1,5 +1,7 @@
 import React from "react";
 import { Code2, Activity, Cpu, Layers, Network, Binary } from "lucide-react";
+import { AuroraText } from "@/components/magicui/aurora-text";
+import { TypingAnimation } from "@/components/magicui/typing-animation";
 
 const ExperienceCard = ({
   title,
@@ -105,21 +107,15 @@ const ExperienceSection = () => {
 
         {/* Content container */}
         <div className="relative container mx-auto px-6 mt-10">
-          {/* Section header with enhanced effects */}
-          <div className="flex flex-col items-center space-y-8 mb-20">
-            <div className="relative">
-              <h2 className="text-5xl md:text-7xl font-black text-transparent bg-gradient-to-r from-teal-400 to-blue-500 bg-clip-text text-center">
-                Professional Journey
-              </h2>
-              <div className="absolute inset-0 -z-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 blur-3xl rounded-full" />
-            </div>
-            <p className="text-lg md:text-xl text-gray-400 font-medium tracking-wide text-center max-w-2xl">
-              "Transforming ideas into digital reality, one project at a time"
-            </p>
+          <div className="mx-auto max-w-5xl px-6 text-center">
+            <h1 className="text-4xl text-center font-bold tracking-tighter md:text-5xl lg:text-7xl">
+              <AuroraText className="font-bold">Professional Experience</AuroraText>
+            </h1>
+            <TypingAnimation className='text-xl text-[#D1D5DB] md:text-2xl mt-3'>A Journey of Code and Creativity</TypingAnimation>
           </div>
 
           {/* Experience grid with improved layout */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto lg:mt-12 md:mt-8 mt-6">
             {experiences.map((exp, index) => (
               <ExperienceCard key={index} {...exp} />
             ))}
