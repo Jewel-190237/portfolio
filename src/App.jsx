@@ -9,18 +9,14 @@ import Hero from "./pages/Hero/Hero";
 import Skills from "./pages/Skills/Skills";
 import Education from "./pages/Education/Education";
 
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 export default function App() {
-  const location = useLocation();
-
-  const isOnePage = location.pathname === "/";
 
   return (
     <>
       <Header />
       <Routes>
-        {/* One-page layout rendered at root path */}
         <Route
           path="/"
           element={
@@ -28,12 +24,12 @@ export default function App() {
               <Hero />
               <Skills />
               <Experience />
+              <Projects />
               <Education />
               <Contact />
             </>
           }
         />
-        {/* Individual pages for sections */}
         <Route path="/skills" element={<Skills />} />
         <Route path="/experience" element={<Experience />} />
         <Route path="/education" element={<Education />} />

@@ -1,4 +1,4 @@
-import HeroImg from "@/assets/images/hero.jpg";
+import HeroImg from "@/assets/images/jewel.png";
 import OlovaLogo from "@/assets/images/olova.png";
 
 export default function About() {
@@ -14,7 +14,7 @@ export default function About() {
               <div className="bg-linear-to-b aspect-76/59 relative rounded-2xl p-px from-zinc-300 to-transparent">
                 <img
                   src={HeroImg}
-                  className="rounded-[15px] shadow block"
+                  className="rounded-[15px] shadow block border border-green-900/40"
                   alt="payments illustration"
                   width={1207}
                   height={929}

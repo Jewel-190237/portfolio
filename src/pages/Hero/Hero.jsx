@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import Prism from "prismjs";
 import "prismjs/components/prism-javascript";
@@ -7,7 +8,6 @@ import PortfolioPage from "@/pages/About/About";
 import SparklesText from "@/components/ui/sparkles-text";
 import { FlipWords } from "@/components/ui/flip-words";
 
-// Grid Background - Replacing the HexagonBackground
 const GridBackground = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
@@ -42,31 +42,41 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-    "Full-Stack Developer & UI/UX Enthusiast",
-    "JavaScript Developer & Creator of Olova.js",
-    "Learning MARN Stack",
-    "Linux & GitHub for DevOps Enthusiast",
+    "Full-Stack Developer",
+    "Software Engineer",
+    "React & Next.js Developer",
+    "Node.js & Express Developer",
+    "JavaScript Enthusiast",
   ];
 
+  // skills: [
+  //     'React', 'NextJS', 'Redux', 'Express',
+  //     'MySQL', 'MongoDB', 'Docker', 'AWS', 'TypeScript',
+  //     'GraphQL', 'Git', 'Linux', 'Discord Development'
+  // ],
   const [code] = useState(`
 const profile = {
-    name: 'Nazmul Hossain',
-    title: 'Full-Stack Developer | Cloud Enthusiast | Problem Solver',
+    name: 'Din Mohammad Jewel',
+    title: 'Full-Stack Developer | Software Engineer | Teacher',
     skills: [
-        'React', 'NextJS', 'Redux', 'Express',
-        'MySQL', 'MongoDB', 'Docker', 'AWS', 'TypeScript',
-        'GraphQL', 'Git', 'Linux', 'Discord Development'
+        'React.js', 'Next.js', 'Node.js', 'Express',
+        'MySQL', 'MongoDB', 'Tailwind CSS', 'TypeScript',
+        'JavaScript', 'Git', 'Linux', 'Discord Development'
     ],
     hardWorker: true,
     quickLearner: true,
     problemSolver: true,
-    yearsOfExperience: 4, 
+    yearsOfExperience: 1 year,
+    projects: [
+        'PetStick', 'Bus Ticket Management', 'TaxStick',
+        'Agencistick', 'Medical Camp Management', 'Portfolio Website',
+    ],
     hireable: function() {
         return (
             this.hardWorker &&
             this.problemSolver &&
-            this.skills.length >= 5 &&
-            this.yearsOfExperience >= 3
+            this.skills.length >= 10 &&
+            this.yearsOfExperience >= 1
         );
     }
 };
@@ -137,8 +147,9 @@ const profile = {
                   <span className="relative inline-block">
                     I'm
                     <span className="typing-effect gradient-text">
-                      {" "}
-                      Nazmul Hossain
+                      <span className="text-blue-400"> Din</span>
+                      <span className="text-purple-400"> Muhammad</span>
+                      <span className="text-teal-400"> Jewel</span>
                     </span>
                   </span>
                 </h1>
@@ -168,12 +179,14 @@ const profile = {
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate__animated animate__fadeInUp animate__delay-2s">
                 {/* View Projects Button */}
                 <a
-                  href="https://github.com/seraprogrammer"
+                target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/file/d/1QsWlcpjyYNYhcjH15w5cJNHND3VJdbC3/view"
                   className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-teal-400">
                     <span className="relative flex items-center justify-center gap-2 text-white font-medium">
-                      <span>Learn More</span>
+                      <span>Get Resume</span>
                       <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
                     </span>
                   </span>
@@ -181,12 +194,14 @@ const profile = {
 
                 {/* Contact Button */}
                 <a
-                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="/contact"
                   className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
                     <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white">
-                      <span>Get Resume</span>
+                      <span>Contact Me</span>
                       <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12"></i>
                     </span>
                   </span>
