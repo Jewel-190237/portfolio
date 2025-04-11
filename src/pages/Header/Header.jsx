@@ -10,6 +10,7 @@ import {
   FaCode,
   FaEnvelope,
   FaBars,
+  FaBriefcaseMedical,
 } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
 
@@ -46,7 +47,7 @@ export default function Header() {
     },
     {
       id: "AdditionalExperience",
-      icon: FaGraduationCap,
+      icon: FaBriefcaseMedical,
       text: "Additional Experience",
       path: "/additionalExperience",
     },

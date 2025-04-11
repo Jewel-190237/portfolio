@@ -91,16 +91,16 @@ const AdditionalExperience = () => {
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className="grid grid-cols-1 md:grid-cols-2 gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 gap-8 "
         >
           {educationData.map((edu, index) => (
             <motion.div
               key={index}
               variants={cardVariants}
-              className={`relative rounded-xl p-8 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm  `}
+              className={`relative  rounded-xl p-8 transition-all duration-300 bg-gray-900/50 backdrop-blur-sm `}
             >
               <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
-              <div className="space-y-6">
+              <div className="space-y-6 hover:-translate-y-2 translation-all duration-500 ease-in-out transform  hover:scale-105">
                 <div className="space-y-2">
                   <div className="flex items-center gap-3 ">
                     <span className="">{edu.mascot}</span>

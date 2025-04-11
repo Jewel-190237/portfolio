@@ -14,6 +14,7 @@ module.exports = {
         gradient: 'gradient-x 5s ease infinite',
         'gradient-x': 'gradient-x 5s ease infinite',
         shine: "shine 14s ease-in-out infinite",
+        customPulse: "customPulse 1.5s infinite",
       },
       keyframes: {
         meteor: {
@@ -51,6 +52,11 @@ module.exports = {
           "100%": {
             backgroundPosition: "0% 50%",
           },
+        },
+        customPulse: {
+          "0%": { transform: "scale(1)", opacity: 1 },
+          "50%": { transform: "scale(1.2)", opacity: 0.6 },
+          "100%": { transform: "scale(1)", opacity: 1 },
         },
       },
       borderRadius: {

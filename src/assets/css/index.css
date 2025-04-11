@@ -202,6 +202,8 @@ pre[class*="language-"] {
     --animate-aurora: aurora 8s ease-in-out infinite alternate;
     --animate-shine: shine var(--duration) infinite linear;
     --animate-gradient: gradient 8s linear infinite;
+    --animate-background-position-spin: background-position-spin 3000ms infinite alternate;
+    --animate-pulse: pulse var(--duration) ease-out infinite;
   }
 }
 
@@ -261,6 +263,22 @@ pre[class*="language-"] {
   @keyframes gradient {
   to {
     backgroundPosition: var(--bg-size, 300%) 0;
+    }
+  }
+  @keyframes background-position-spin {
+  0% {
+    backgroundPosition: top center;
+    }
+  100% {
+    backgroundPosition: bottom center;
+    }
+  }
+  @keyframes pulse {
+  0%, 100% {
+    boxShadow: 0 0 0 0 var(--pulse-color);
+    }
+  50% {
+    boxShadow: 0 0 0 8px var(--pulse-color);
     }
   }
 }
