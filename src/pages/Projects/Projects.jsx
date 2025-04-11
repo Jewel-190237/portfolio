@@ -36,23 +36,22 @@ const projects = [
     link: "https://pathxfinder.com/",
   },
   {
-    name: "PetStick",
+    name: "MediCareCamp",
     heading:
-      "Complete PetShop Management System",
-    image: "rock.jpg",
-    link: "https://i.postimg.cc/DwgWTfP0/Annotation-2025-03-19-113338.png",
+      "Medical Camp Management System",
+    image: "/medical.jpg",
+    link: "https://medical-camp-management-6978c.web.app/",
   },
   {
-    name: "PetStick",
+    name: "StudyUtilityHub",
     heading:
-      "Complete PetShop Management System",
-    image: "rock.jpg",
-    link: "https://i.postimg.cc/DwgWTfP0/Annotation-2025-03-19-113338.png",
+      "Online Assignment Management System",
+    image: "/ass.jpg",
+    link: "https://assignment-11-baa86.web.app/",
   },
 ];
 
 export default function Projects() {
-
   return (
     <ReactLenis root>
       <main className="bg-black">
