@@ -36,7 +36,7 @@ const slugs = [
   "animation",
   "webdevelopment",
   "softwareengineering",
-  "fullstack",
+  "Full Stack",
   "frontend",
   "backend",
   "github",

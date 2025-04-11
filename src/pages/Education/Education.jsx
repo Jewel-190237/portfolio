@@ -1,15 +1,14 @@
 import { useState } from "react";
 import {
-  Award,
   Calendar,
-  BookOpen,
-  Trophy,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 
-import { FaGraduationCap } from "react-icons/fa";
+import { FaBookReader, FaGraduationCap } from "react-icons/fa";
+import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
+import { MdCastForEducation } from "react-icons/md";
 
 const EducationSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -20,30 +19,24 @@ const EducationSection = () => {
       school: "Khulna University",
       mascot: <FaGraduationCap className="text-[#35a9df] lg:text-5xl md:text-4xl text-3xl animate-bounce" />,
       year: "2019-2023",
-      achievements: ["GPA: 3.32", "Subject: Science"],
-      skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
       description:
-        "Focused on core science subjects with emphasis on practical laboratory work and scientific research methodologies.",
+      "Pursued an in-depth curriculum covering algorithms, data structures, operating systems, and computer architecture. Delved into software engineering, databases, computer networks, and machine learning. Participated in team-based projects, research initiatives, and coding competitions. Developed practical skills through building real-world applications using modern technologies such as JavaScript, React, Node.js, and MongoDB. Strengthened problem-solving abilities and system design thinking through rigorous coursework and hands-on lab sessions.",
     },
     {
       degree: "Higher Secondary Certificate (HSC)",
-      school: "Dottopara Model Degree College",
-      mascot: <FaGraduationCap className="text-[#35a9df] lg:text-5xl md:text-4xl text-3xl animate-bounce" />,
-      year: "2021-2023",
-      achievements: ["GPA: 4.25", "Subject: Arts"],
-      skills: ["Literature", "Social Studies", "Economics", "History"],
+      school: "Khulna Alia Kamil Madrasah",
+      mascot: <FaBookReader className="text-[#1b9759] lg:text-5xl md:text-4xl text-3xl animate-bounce" />,
+      year: "2016-2018",
       description:
-        "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
+      "Completed Higher Secondary Certificate (HSC) in the Science stream with an outstanding GPA of 4.88. Earned a Merit Board Scholarship in recognition of academic excellence. Gained a solid foundation in core scientific subjects such as Physics, Chemistry, Biology, and Mathematics. This academic journey fostered a strong analytical mindset, disciplined study habits, and a deep understanding of scientific principles, which laid the groundwork for pursuing advanced studies in Computer Science and Engineering.",
     },
     {
-      degree: "Higher Secondary Certificate (HSC)",
-      school: "Dottopara Model Degree College",
-      mascot: <FaGraduationCap className="text-[#35a9df] lg:text-5xl md:text-4xl text-3xl animate-bounce" />,
-      year: "2021-2023",
-      achievements: ["GPA: 4.25", "Subject: Arts"],
-      skills: ["Literature", "Social Studies", "Economics", "History"],
+      degree: "Higher Secondary Certificate (SSC)",
+      school: "Assasuni Alia Madrasah",
+      mascot: <MdCastForEducation className="text-[#35a9df] lg:text-5xl md:text-4xl text-3xl animate-bounce" />,
+      year: "2014-2016",
       description:
-        "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
+      "Achieved outstanding academic success in the Science group, securing a perfect GPA of 5.00 in the Secondary School Certificate (SSC) examination. Ranked First in Assasuni Upazila and Second in Satkhira District, demonstrating academic leadership and dedication. Gained strong foundations in core science subjects including Physics, Chemistry, Biology, and Mathematics. Recognized for consistent top performance, critical thinking, and disciplined study habits, laying the groundwork for future academic and professional achievements.",
     },
   ];
 
@@ -118,47 +111,17 @@ const EducationSection = () => {
                       <AuroraText>{edu.degree}</AuroraText>
                     </h3>
                   </div>
-                  <p className="text-lg md:text-xl lg:text-2xl text-gray-50 flex items-center gap-2 py-2">
-                    {edu.school}
-                  </p>
+                  <AnimatedGradientText className='text-lg md:text-xl lg:text-2xl flex items-center gap-2 font-bold py-2'>
+                      {edu.school}
+                  </AnimatedGradientText>
                   <p className="text-gray-400 flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
                     {edu.year}
                   </p>
                 </div>
-
-                <p className="text-gray-300 text-sm italic border-l-2 border-teal-500 pl-3">
+                <p className="text-justify text-gray-300 text-base italic border-l-2 border-teal-500 pl-3 ">
                   {edu.description}
                 </p>
-
-                <div className="space-y-3">
-                  <h4 className="text-sm font-semibold text-white flex items-center gap-2">
-                    <Trophy className="w-4 h-4 text-yellow-500" />
-                    Key Achievements
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {edu.achievements.map((achievement, i) => (
-                      <div
-                        key={i}
-                        className="px-3 py-1 rounded-full bg-teal-500/10 text-teal-400 flex items-center gap-2 text-sm"
-                      >
-                        <Award className="w-4 h-4" />
-                        <span>{achievement}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  {edu.skills.map((skill, i) => (
-                    <span
-                      key={i}
-                      className="px-2 py-1 text-xs rounded bg-blue-500/10 text-blue-300"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
               </div>
             </motion.div>
           ))}

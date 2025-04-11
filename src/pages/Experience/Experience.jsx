@@ -8,7 +8,6 @@ import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { FaReact } from "react-icons/fa";
 import { ShineBorder } from "@/components/magicui/shine-border";
 import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
-import { cn } from "@/lib/utils";
 
 const ExperienceCard = ({
   title,
@@ -28,7 +27,7 @@ const ExperienceCard = ({
     <div className="relative bg-gray-900/90 rounded-lg p-8 h-full border border-gray-800/50 shadow-xl backdrop-blur-xl">
       {/* Floating icon with pulse effect */}
       <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
-      <div className="relative mb-6">
+      <div className="relative mb-6 animate-bounce">
         {/* <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-25 rounded-full blur-xl group-hover:opacity-75 animate-pulse transition-all duration-500" /> */}
         <Icon className="w-12 h-12 text-cyan-400 relative z-10 transform group-hover:rotate-12 transition-transform duration-300" />
       </div>
@@ -85,8 +84,8 @@ const ExperienceSection = () => {
     },
     {
       icon: Code2,
-      title: "JavaScript Developer",
-      company: "OlovJS (Sera Programmer)",
+      title: "Full Stack Developer",
+      company: "Freelance Projects",
       period: "2023 - Present",
       description:
         "Contributed to developing JavaScript libraries and enhancing framework functionalities.",

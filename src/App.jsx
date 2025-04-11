@@ -10,6 +10,7 @@ import Skills from "./pages/Skills/Skills";
 import Education from "./pages/Education/Education";
 
 import { Route, Routes } from "react-router-dom";
+import AdditionalExperience from "./pages/EditionalExperience/AdditionalExperience";
 
 export default function App() {
 
@@ -26,6 +27,7 @@ export default function App() {
               <Experience />
               <Projects />
               <Education />
+              <AdditionalExperience />
               <Contact />
             </>
           }
@@ -35,6 +37,7 @@ export default function App() {
         <Route path="/education" element={<Education />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/additionalExperience" element={<AdditionalExperience />} />
       </Routes>
     </>
   );

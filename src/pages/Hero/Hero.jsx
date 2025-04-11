@@ -169,8 +169,7 @@ const profile = {
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  JavaScript lover 🚀 | OlovaJS creator 🔧 | Crafting frameworks
-                  and coding the future 💻✨
+                💻 Full Stack Developer  |  🛠️ Software Engineer  |  📚 Teacher 🚀
                 </p>
               </div>
 

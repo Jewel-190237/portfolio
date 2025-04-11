@@ -37,13 +37,19 @@ export default function Header() {
       text: "Experience",
       path: "/experience",
     },
+    { id: "projects", icon: FaLaptopCode, text: "Projects", path: "/projects" },
     {
       id: "education",
       icon: FaGraduationCap,
       text: "Education",
       path: "/education",
     },
-    { id: "projects", icon: FaLaptopCode, text: "Projects", path: "/projects" },
+    {
+      id: "AdditionalExperience",
+      icon: FaGraduationCap,
+      text: "Additional Experience",
+      path: "/additionalExperience",
+    },
     { id: "contact", icon: FaEnvelope, text: "Contact", path: "/contact" },
   ];
 
