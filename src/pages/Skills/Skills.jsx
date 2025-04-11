@@ -1,3 +1,6 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+/* eslint-disable react/no-unknown-property */
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -6,8 +9,6 @@ import { Code2, Paintbrush, Database, Layout, Cpu, Cloud } from "lucide-react";
 import {
   FaReact,
   FaNodeJs,
-  FaPython,
-  FaDocker,
   FaGitAlt,
   FaLinux,
   FaFigma,
@@ -19,11 +20,7 @@ import {
   SiNextdotjs,
   SiTypescript,
   SiTailwindcss,
-  SiPostgresql,
   SiMongodb,
-  SiGraphql,
-  SiJest,
-  SiWebpack,
   SiRedux,
   SiFirebase,
   SiVercel,

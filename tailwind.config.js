@@ -1,12 +1,19 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./node_modules/magic-ui/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       animation: {
         meteor: "meteor 5s linear infinite",
         aurora: 'aurora 10s ease-in-out infinite',
+        gradient: 'gradient-x 5s ease infinite',
+        'gradient-x': 'gradient-x 5s ease infinite',
+        shine: "shine 14s ease-in-out infinite",
       },
       keyframes: {
         meteor: {
@@ -22,9 +29,28 @@ module.exports = {
             opacity: "0",
           },
         },
+        'gradient-x': {
+          '0%, 100%': {
+            backgroundPosition: '0% 50%',
+          },
+          '50%': {
+            backgroundPosition: '100% 50%',
+          },
+        },
         aurora: {
           '0%, 100%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },
+        },
+        shine: {
+          "0%": {
+            backgroundPosition: "0% 50%",
+          },
+          "50%": {
+            backgroundPosition: "100% 50%",
+          },
+          "100%": {
+            backgroundPosition: "0% 50%",
+          },
         },
       },
       borderRadius: {

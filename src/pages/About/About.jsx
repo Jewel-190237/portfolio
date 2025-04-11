@@ -1,5 +1,4 @@
 import HeroImg from "@/assets/images/jewel.png";
-import OlovaLogo from "@/assets/images/olova.png";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { ShineBorder } from "@/components/magicui/shine-border";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
@@ -20,17 +19,17 @@ export default function About() {
                 <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
                 <img
                   src={HeroImg}
-                  className="rounded-[15px] shadow block border border-green-900/40"
+                  className="rounded-[15px] w-[1407px] h-[529px] shadow block border border-green-900/40"
                   alt="payments illustration"
                   width={1207}
-                  height={929}
+                  height={729}
                 />
               </div>
             </div>
 
             <div className="relative space-y-4">
               <p className="text-white">
-                Hello! I'm <strong>Din Muhammad Jewel</strong>, a passionate <strong>Software Engineer</strong> specializing in frontend development, with a growing focus on backend and full-stack development. I hold a B.Sc. in Computer Science and Engineering from <b>Khulna University</b> and am currently working as a <strong>Junior Software Engineer</strong> at <strong>Appstick Limited</strong>. In my role, I create visually appealing, scalable, and interactive web interfaces that ensure a seamless user experience.
+                Hello! I&apos;m <strong>Din Muhammad Jewel</strong>, a passionate <strong>Software Engineer</strong> specializing in frontend development, with a growing focus on backend and full-stack development. I hold a B.Sc. in Computer Science and Engineering from <b>Khulna University</b> and am currently working as a <strong>Junior Software Engineer</strong> at <strong>Appstick Limited</strong>. In my role, I create visually appealing, scalable, and interactive web interfaces that ensure a seamless user experience.
               </p>
               <p className="text-white">
                 My primary focus is on building innovative web solutions and empowering users with seamless, high-performance applications. I am committed to constantly improving my skills to contribute to the software development community, with a special interest in full-stack development.

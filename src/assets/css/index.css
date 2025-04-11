@@ -201,6 +201,7 @@ pre[class*="language-"] {
   .theme {
     --animate-aurora: aurora 8s ease-in-out infinite alternate;
     --animate-shine: shine var(--duration) infinite linear;
+    --animate-gradient: gradient 8s linear infinite;
   }
 }
 
@@ -255,6 +256,11 @@ pre[class*="language-"] {
     }
   to {
     background-position: 0% 0%;
+    }
+  }
+  @keyframes gradient {
+  to {
+    backgroundPosition: var(--bg-size, 300%) 0;
     }
   }
 }

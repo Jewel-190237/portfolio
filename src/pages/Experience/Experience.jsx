@@ -1,7 +1,14 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React from "react";
-import { Code2, Activity, Cpu, Layers, Network, Binary } from "lucide-react";
+import { Code2} from "lucide-react";
+import { RiLayoutMasonryLine } from "react-icons/ri";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
+import { FaReact } from "react-icons/fa";
+import { ShineBorder } from "@/components/magicui/shine-border";
+import { AnimatedGradientText } from "@/components/magicui/animated-gradient-text";
+import { cn } from "@/lib/utils";
 
 const ExperienceCard = ({
   title,
@@ -11,6 +18,7 @@ const ExperienceCard = ({
   icon: Icon,
 }) => (
   <div className="group relative overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
+
     {/* Glass morphism effect */}
     <div className="absolute inset-0 backdrop-blur-lg bg-white/5 rounded-lg" />
 
@@ -19,15 +27,18 @@ const ExperienceCard = ({
 
     <div className="relative bg-gray-900/90 rounded-lg p-8 h-full border border-gray-800/50 shadow-xl backdrop-blur-xl">
       {/* Floating icon with pulse effect */}
+      <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
       <div className="relative mb-6">
-        <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-25 rounded-full blur-xl group-hover:opacity-75 animate-pulse transition-all duration-500" />
+        {/* <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-25 rounded-full blur-xl group-hover:opacity-75 animate-pulse transition-all duration-500" /> */}
         <Icon className="w-12 h-12 text-cyan-400 relative z-10 transform group-hover:rotate-12 transition-transform duration-300" />
       </div>
 
       {/* Content with improved typography */}
       <div className="space-y-3">
         <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-          {title}
+          <AnimatedGradientText >
+            {title}
+          </AnimatedGradientText>
         </h3>
         <div className="flex justify-between items-center text-gray-300">
           <span className="font-semibold text-blue-400">{company}</span>
@@ -49,6 +60,7 @@ const ExperienceCard = ({
         <div className="absolute bottom-0 left-0 w-6 h-[2px] bg-purple-500/50" />
         <div className="absolute bottom-0 left-0 w-[2px] h-6 bg-purple-500/50" />
       </div>
+
     </div>
   </div>
 );
@@ -56,20 +68,20 @@ const ExperienceCard = ({
 const ExperienceSection = () => {
   const experiences = [
     {
-      icon: Network,
-      title: "WordPress Developer",
-      company: "Fiverr",
-      period: "2019 - 2020",
+      icon: FaReact,
+      title: "Junior Software Engineer",
+      company: "Appstick Limited",
+      period: "2024 - Present",
       description:
-        "Worked on developing and customizing WordPress websites for clients globally.",
+        "Building and maintaining web applications, focusing on performance, scalability, and enhancing user experience with modern front-end technologies. Collaborating closely with cross-functional teams to deliver high-quality solutions.",
     },
     {
-      icon: Layers,
-      title: "Junior Frontend Developer",
-      company: "Sera Programmer",
-      period: "2021 - 2023",
+      icon: RiLayoutMasonryLine,
+      title: "Front-End Developer Internship",
+      company: "ICT Cell of Khulna University",
+      period: "2022 - 2023",
       description:
-        "Assisted in building and optimizing user interfaces with a focus on responsive and interactive designs.",
+      "Contributed to building responsive user interfaces with modern front-end technologies. Worked with senior developers to enhance UI/UX and optimize web application performance.",
     },
     {
       icon: Code2,
@@ -83,7 +95,7 @@ const ExperienceSection = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-b relative overflow-hidden pt-32 pb-20">
+      <div className="min-h-screen bg-gradient-to-b relative overflow-hidden pt-32 pb-10">
         {/* Animated gradient background */}
         <div className="absolute inset-0 bg-[#04081A]" />
 

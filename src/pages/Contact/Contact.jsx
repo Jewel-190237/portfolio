@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { Send, Phone, MapPin, Mail } from "lucide-react";
+import { useState } from "react";
+import { Send, MapPin, Mail } from "lucide-react";
 import { BorderBeam } from "@/components/magicui/border-beam";
-
+import { ToastContainer, toast } from 'react-toastify';
+import emailjs from 'emailjs-com';
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -11,8 +12,6 @@ export default function Contact() {
   });
 
   const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState(null);
-
   const validateForm = () => {
     let tempErrors = {};
     let isValid = true;
@@ -44,47 +43,30 @@ export default function Contact() {
     return isValid;
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     if (!validateForm()) {
-      setStatus("Please fill in all required fields correctly.");
+      toast.error("Please fill in all fields correctly.");
       return;
     }
 
-    // Create a new FormData object to send to Web3Forms API
-    const form = new FormData();
-    form.append("access_key", "90f4b8af-e590-42b0-beaf-10b18f66a703"); // Replace with your Web3Forms access key
-    form.append("name", formData.name);
-    form.append("email", formData.email);
-    form.append("subject", formData.subject || "New Contact Form Submission");
-    form.append("message", formData.message);
-
-    try {
-      // Send form data to Web3Forms API
-      const response = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: form,
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        setStatus("Message sent successfully!");
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
-        setErrors({});
-      } else {
-        setStatus(result.message || "There was an error sending your message.");
-      }
-    } catch (error) {
-      setStatus("An error occurred. Please try again.");
-      console.error("Error:", error);
-    }
+    emailjs
+      .send(
+        'service_6e81197',
+        'template_pjl1nfd',
+        formData,
+        'vGyvHNpbS_ximT6EO'
+      )
+      .then(
+        () => {
+          toast.success("Thank you for reaching out! I’ll get back to you as soon as possible.");
+          setFormData({ name: "", email: "", subject: "", message: "" });
+        },
+        (error) => {
+          toast.error(error);
+        }
+      );
   };
 
   return (
@@ -102,7 +84,7 @@ export default function Contact() {
                   Get in Touch
                 </h2>
                 <p className="text-gray-300 text-lg">
-                  Have a question or want to work together? Drop us a message!
+                  Have a question or want to work together? Drop me a message!
                 </p>
               </div>
 
@@ -113,17 +95,22 @@ export default function Contact() {
                   </div>
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-gray-400">olovajs@gmail.com</p>
+                    <a
+                      href="mailto:190237@ku.ac.bd"
+                      className="text-gray-400 hover:text-purple-400 underline underline-offset-2 transaction-colors duration-300"
+                    >
+                      190237@ku.ac.bd
+                    </a>
                   </div>
-                </div>
 
+                </div>
                 <div className="flex items-center space-x-4">
                   <div className="bg-pink-500/10 p-3 rounded-lg">
                     <MapPin className="w-6 h-6 text-pink-400" />
                   </div>
                   <div>
                     <h3 className="font-semibold">Location</h3>
-                    <p className="text-gray-400">Laxmipure, Natore 6400</p>
+                    <p className="text-gray-400">Khulna, Bangladesh</p>
                   </div>
                 </div>
               </div>
@@ -131,7 +118,7 @@ export default function Contact() {
 
             {/* Contact Form */}
             <div className="backdrop-blur-lg bg-white/5 p-8 rounded-2xl shadow-xl">
-              <BorderBeam duration={20} size={100} colorFrom="#ffaa40" colorTo="#9c40ff" />
+              <BorderBeam duration={20} size={180} colorFrom="#ffaa40" colorTo="#9c40ff" />
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 gap-6">
                   <div>
@@ -213,22 +200,11 @@ export default function Contact() {
                   <Send className="w-4 h-4" />
                 </button>
               </form>
-
-              {/* Status Message */}
-              {status && (
-                <div
-                  className={`mt-4 text-center ${status.includes("success")
-                    ? "text-green-400"
-                    : "text-red-400"
-                    }`}
-                >
-                  <p>{status}</p>
-                </div>
-              )}
             </div>
           </div>
         </div>
       </section>
+      <ToastContainer />
     </main>
   );
 }

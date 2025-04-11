@@ -147,7 +147,7 @@ const profile = {
               {/* Name section */}
               <div className="relative mb-6 sm:mb-8">
                 <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
-                  <span>Hello, I'm</span>
+                  <span>Hello, I&apos;m</span>
                   <span className="relative inline-block">
                     <SparklesText className="text-blue-400" text="Din Muhammad" />
                   </span>
