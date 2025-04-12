@@ -3,6 +3,7 @@ import { Send, MapPin, Mail } from "lucide-react";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { ToastContainer, toast } from 'react-toastify';
 import emailjs from 'emailjs-com';
+import { FaWhatsapp } from "react-icons/fa";
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -105,6 +106,21 @@ export default function Contact() {
 
                 </div>
                 <div className="flex items-center space-x-4">
+                  <div className="bg-green-500/10 p-3 rounded-lg">
+                    <FaWhatsapp className="w-6 h-6 text-green-400" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">Phone Number</h3>
+                    <a
+                      href="tel:+8801980445424"
+                      className="text-gray-400 hover:text-green-400 underline underline-offset-2 transaction-colors duration-300"
+                    >
+                      +8801980445424
+                    </a>
+                  </div>
+
+                </div>
+                <div className="flex items-center space-x-4">
                   <div className="bg-pink-500/10 p-3 rounded-lg">
                     <MapPin className="w-6 h-6 text-pink-400" />
                   </div>
@@ -113,6 +129,21 @@ export default function Contact() {
                     <p className="text-gray-400">Khulna, Bangladesh</p>
                   </div>
                 </div>
+              </div>
+              <div className="!mt-10">
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://drive.google.com/file/d/1QsWlcpjyYNYhcjH15w5cJNHND3VJdbC3/view"
+                  className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
+                >
+                  <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-teal-400">
+                    <span className="relative flex items-center justify-center gap-2 text-white font-medium">
+                      <span>Get Resume</span>
+                      <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
+                    </span>
+                  </span>
+                </a>
               </div>
             </div>
 

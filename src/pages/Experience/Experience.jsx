@@ -88,7 +88,7 @@ const ExperienceSection = () => {
       company: "Freelance Projects",
       period: "2023 - Present",
       description:
-        "Contributed to developing JavaScript libraries and enhancing framework functionalities.",
+      "Built full-stack web applications, developed reusable JavaScript libraries, and improved framework features to enhance performance and maintainability. Created and maintained reusable component , optimized backend APIs for performance and scalability",
     },
   ];
 
