@@ -71,7 +71,7 @@ export default function Header() {
             </div>
 
             {/* Navigation Links */}
-            <div className={`${isMenuOpen ? 'block' : 'hidden'} md:block`}>
+            <div className={`${isMenuOpen ? 'block' : 'hidden'} md:block  z-20`}>
               <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-1 lg:gap-2 py-4 md:py-0">
                 {navLinks.map(({ id, icon: Icon, text, path }) => (
                   <Link

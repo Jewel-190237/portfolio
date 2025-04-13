@@ -21,7 +21,7 @@ export default function About() {
                 <Meteors number={60} />
                 <img
                   src={HeroImg}
-                  className="rounded-[15px] w-[1407px] lg:h-[729px] md:h-[500px] h-[350px] shadow block border border-green-900/40 p-3 z-50 relative"
+                  className="rounded-[15px] w-[1407px] lg:h-[729px] md:h-[550px] h-[450px] shadow block border border-green-900/40 p-3 z-10 relative"
                   alt="Jewel"
                   width={1207}
                   height={729}
