@@ -108,7 +108,7 @@ const profile = {
 
   return (
     <>
-      <main className="pt-20 lg:pt-[0rem] bg-[#020617] text-white min-h-screen">
+      <main className="pt-20 lg:pt-36 bg-[#020617] text-white min-h-screen">
         <section className="hero min-h-screen flex items-center relative px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0"></div>
 
@@ -139,7 +139,9 @@ const profile = {
                 <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
                 <span className="text-gray-300 text-xs sm:text-sm font-medium">
                   <h1 className="font-bold tracking-tighter">
-                    <AuroraText className="text-blue-400 text-xl">Welcome to my Universe</AuroraText>
+                    <AuroraText className="text-blue-400 text-xl">
+                      Welcome to my Universe
+                    </AuroraText>
                   </h1>
                 </span>
               </div>
@@ -147,9 +149,13 @@ const profile = {
               {/* Name section */}
               <div className="relative mb-6 sm:mb-8">
                 <h1 className="text-xl sm:text-4xl lg:text-7xl font-bold leading-tight">
-                  <span>Hello, I&apos;m</span> <br className="hidden lg:block" />
+                  <span>Hello, I&apos;m</span>{" "}
+                  <br className="flex sm:block" />
                   <span className="relative inline-block">
-                    <SparklesText className="text-blue-400 text-4xl sm:text-4xl lg:text-7xl font-bold leading-tight" text="Din Muhammad" />
+                    <SparklesText
+                      className="text-blue-400  text-4xl sm:text-4xl lg:text-7xl font-bold leading-tight"
+                      text="Din Muhammad"
+                    />
                   </span>
                 </h1>
                 <div className="absolute -z-10 top-1/2 -translate-y-1/2 left-1/4 w-24 sm:w-32 h-24 sm:h-32 bg-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
@@ -169,7 +175,7 @@ const profile = {
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                💻 Full Stack Developer  |  🛠️ Software Engineer  |  📚 Teacher 🚀
+                  💻 Full Stack Developer | 🛠️ Software Engineer | 📚 Teacher 🚀
                 </p>
               </div>
 
@@ -215,12 +221,14 @@ const profile = {
               </div> */}
               <div className="hidden lg:block absolute right-10 top-20 animate-float">
                 <div className="px-4 py-2 rounded-lg bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 text-blue-400">
-                  <i className="fas fa-code"></i>&nbsp;&nbsp;Full Stack Developer
+                  <i className="fas fa-code"></i>&nbsp;&nbsp;Full Stack
+                  Developer
                 </div>
               </div>
               <div className="hidden lg:block absolute top-[17rem] left-[70%] transform -translate-x-1/2 animate-float">
                 <div className="px-4 py-2 rounded-lg bg-amber-500/10 backdrop-blur-sm border border-amber-500/20 text-amber-400">
-                  <i className="fas fa-lightbulb"></i>&nbsp;&nbsp;Software Engineer
+                  <i className="fas fa-lightbulb"></i>&nbsp;&nbsp;Software
+                  Engineer
                 </div>
               </div>
             </div>
@@ -228,7 +236,12 @@ const profile = {
             {/* Right column - Code window */}
             <div className="w-full lg:w-1/2 animate__animated animate__fadeInDown animate__delay-0.1s">
               <div className="gradient-border">
-              <BorderBeam colorTo="#9c40ff" colorFrom="#ffaa40" duration={8} size={100} />
+                <BorderBeam
+                  colorTo="#9c40ff"
+                  colorFrom="#ffaa40"
+                  duration={8}
+                  size={100}
+                />
                 <div className="code-window bg-[#091121]">
                   <div className="window-header">
                     <div className="window-dot bg-red-500"></div>
