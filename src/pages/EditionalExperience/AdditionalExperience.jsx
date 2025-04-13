@@ -116,12 +116,12 @@ const AdditionalExperience = () => {
                   <p className="text-lg md:text-xl lg:text-2xl text-gray-50 flex items-center gap-2 py-2">
                     {edu.school}
                   </p>
-                  <div className="flex items-center gap-3 md:gap-5 lg:gap-8 xl:gap-10">
+                  <div className="flex flex-col md:flex-row items-start md:items-center  gap-3 md:gap-5 lg:gap-8 xl:gap-10">
                     <p className="text-gray-400 flex items-center gap-2">
                       <Calendar className="w-4 h-4" />
                       {edu.year}
                     </p>
-                    <p className="text-gray-400 flex items-center gap-2">
+                    <p className="text-gray-400 flex items-center gap-2 ">
                       <IoLocation className="w-4 h-4" />
                       {edu.location}
                     </p>
