@@ -19,7 +19,7 @@ export default function About() {
                 <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
                 <img
                   src={HeroImg}
-                  className="rounded-[15px] w-[1407px] h-[729px] shadow block border border-green-900/40 p-3 "
+                  className="rounded-[15px] w-[1407px] lg:h-[729px] md:h-[500px] h-[350px] shadow block border border-green-900/40 p-3 "
                   alt="payments illustration"
                   width={1207}
                   height={729}

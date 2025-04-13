@@ -35,13 +35,13 @@ const ExperienceCard = ({
       {/* Content with improved typography */}
       <div className="space-y-3">
         <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-          <AnimatedGradientText >
+          <AnimatedGradientText  >
             {title}
           </AnimatedGradientText>
         </h3>
-        <div className="flex justify-between items-center text-gray-300">
-          <span className="font-semibold text-blue-400">{company}</span>
-          <span className="text-sm font-mono bg-blue-500/10 px-3 py-1 rounded-full">
+        <div className="flex flex-col md:flex-row justify-between  text-gray-300">
+          <span className="font-semibold text-blue-400 text-center">{company}</span>
+          <span className="text-sm font-mono bg-blue-500/10 px-3 py-1 rounded-full text-center mt-2 md:mt-0">
             {period}
           </span>
         </div>
@@ -94,7 +94,7 @@ const ExperienceSection = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-b relative overflow-hidden pt-32 pb-10">
+      <div className="min-h-screen bg-gradient-to-b relative overflow-hidden xl:pt-32 lg:pt-20 md:pt-14 pt-0 pb-10">
         {/* Animated gradient background */}
         <div className="absolute inset-0 bg-[#04081A]" />
 

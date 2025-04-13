@@ -95,7 +95,7 @@ export default function Projects() {
             </h1>
             <TypingAnimation className='text-xl md:text-2xl mt-3'> Dive into My Creative Ventures</TypingAnimation>
           </div>
-          <div className="lg:mt-10 md:mt-8 mt-8">
+          <div className="hidden lg:block lg:mt-10 md:mt-8 mt-8">
             <Marquee
               gradient={false}
               speed={50}
@@ -103,7 +103,7 @@ export default function Projects() {
               className=""
             >
               {projects.map((project, i) => (
-                <div key={`p_${i}`} className="w-[400px] md:w-[440px] lg:w-[550px] px-3 last:mr-3">
+                <div key={`p_${i}`} className="w-[550px] px-3 last:mr-3">
                   <Card
                     url={project.link}
                     name={project.name}
@@ -115,6 +115,24 @@ export default function Projects() {
                 </div>
               ))}
             </Marquee>
+          </div>
+          <div className="block lg:hidden lg:mt-10 md:mt-8 mt-8">
+            <div
+              className=" gird grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto"
+            >
+              {projects.map((project, i) => (
+                <div key={`p_${i}`} className="w-full px-3 mt-4 last:mr-3">
+                  <Card
+                    url={project.link}
+                    name={project.name}
+                    image={project.image}
+                    heading={project.heading}
+                    description={project.description}
+                    technologies={project.technologies}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       </main>

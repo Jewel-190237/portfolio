@@ -146,10 +146,10 @@ const profile = {
 
               {/* Name section */}
               <div className="relative mb-6 sm:mb-8">
-                <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
-                  <span>Hello, I&apos;m</span>
+                <h1 className="text-xl sm:text-4xl lg:text-7xl font-bold leading-tight">
+                  <span>Hello, I&apos;m</span> <br className="hidden lg:block" />
                   <span className="relative inline-block">
-                    <SparklesText className="text-blue-400" text="Din Muhammad" />
+                    <SparklesText className="text-blue-400 text-4xl sm:text-4xl lg:text-7xl font-bold leading-tight" text="Din Muhammad" />
                   </span>
                 </h1>
                 <div className="absolute -z-10 top-1/2 -translate-y-1/2 left-1/4 w-24 sm:w-32 h-24 sm:h-32 bg-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
