@@ -2,6 +2,7 @@ import HeroImg from "@/assets/images/jewel.png";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { ShineBorder } from "@/components/magicui/shine-border";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
+import Meteors from "@/components/ui/meteors";
 export default function About() {
   return (
     <>
@@ -15,12 +16,13 @@ export default function About() {
         <div className="lg:mt-12 md:mt-8 mt-6 mx-auto max-w-7xl space-y-8 px-6 md:space-y-16">
           <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
             <div className="relative mb-6 sm:mb-0">
-              <div className="bg-linear-to-b aspect-76/59 relative rounded-2xl p-px from-zinc-300 ">
+              <div className="bg-linear-to-b aspect-76/59 relative rounded-2xl p-px from-zinc-300 overflow-hidden shadow-lg max-w-[1207px] mx-auto">
                 <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
+                <Meteors number={60} />
                 <img
                   src={HeroImg}
-                  className="rounded-[15px] w-[1407px] lg:h-[729px] md:h-[500px] h-[350px] shadow block border border-green-900/40 p-3 "
-                  alt="payments illustration"
+                  className="rounded-[15px] w-[1407px] lg:h-[729px] md:h-[500px] h-[350px] shadow block border border-green-900/40 p-3 z-50 relative"
+                  alt="Jewel"
                   width={1207}
                   height={729}
                 />

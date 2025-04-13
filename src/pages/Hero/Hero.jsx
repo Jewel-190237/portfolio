@@ -121,9 +121,9 @@ const profile = {
           {/* <DotBackground /> */}
 
           {/* Meteors Effect */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <Meteors number={10} />
-          </div>
+          </div> */}
 
           {/* Main content container */}
           <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10 py-12 lg:py-0">
