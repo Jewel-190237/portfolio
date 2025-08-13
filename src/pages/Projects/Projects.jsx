@@ -4,22 +4,21 @@ import { AuroraText } from "@/components/magicui/aurora-text";
 import { ShineBorder } from "@/components/magicui/shine-border";
 import { ReactLenis } from "lenis/react";
 import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
-import { SiMongodb, SiExpress, SiTailwindcss, SiAntdesign, SiRemix, SiNextdotjs } from "react-icons/si";
+import { SiMongodb, SiExpress, SiTailwindcss, SiAntdesign, SiNextdotjs } from "react-icons/si";
 import { PiMagicWandBold } from "react-icons/pi";
 import { Cpu } from "lucide-react";
 import Marquee from "react-fast-marquee";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 const projects = [
   {
-    name: "PetStick",
+    name: "Travelstick",
     heading:
-      "Complete PetShop and Service Management System",
-    image: "/petshop.png",
-    link: "https://petshop.appstick.com.bd/",
-    description: " A complete PetShop Management System with three user roles: Admin, Manager, and User. It features product, order, and user management, along with an advanced HRM module. The platform offers a wide range of services including pet daycare, grooming, training, breeding, adoption, and vaccination. It also includes service provider management, a multi-vendor system with support for multiple payment gateways, and multilingual support.",
+      "Smart & Scalable Travel Management System",
+    image: "/travel.png",
+    link: "https://travelstick.appstick.com.bd/",
+    description: "A complete Smart & Scalable Travel Management System with three user roles: Admin, Manager, and User.It features package booking, hotel booking, offer management, and destination management.It also includes a tour- related mini e - commerce module, a visa management system, and an advanced HRM module.Additionally, it offers service provider management, a single - vendor setup with support for multiple payment gateways, and multilingual support.",
     technologies: [
       { name: "React", icon: FaReact },
-      { name: "Remix", icon: SiRemix },
       { name: "Express.js", icon: SiExpress },
       { name: "MongoDB", icon: SiMongodb },
       { name: "Node.js", icon: FaNodeJs },
@@ -48,7 +47,7 @@ const projects = [
   },
 
   {
-    name: "TaskStick",
+    name: "TaxkStick",
     heading:
       "Complete Task Filing Management System",
     image: "/tax.png",
