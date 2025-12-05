@@ -43,37 +43,37 @@ const GridBackground = () => {
 export default function Hero() {
   const words = [
     "Software Engineer",
-    "Full-Stack Developer",
-    "React & Next.js Developer",
-    "Node.js & Express Developer",
+    "Full-Stack Engineer",
+    "React & Next.js Engineer",
+    "Node.js & Express Engineer",
     "JavaScript Enthusiast",
   ];
   const [code] = useState(`
-const profile = {
-    name: 'Din Mohammad Jewel',
-    title: 'Full-Stack Developer | Software Engineer | Teacher',
-    skills: [
-        'React.js', 'Next.js', 'Node.js', 'Express.js',
-        'MongoDB', 'MySQL', 'Tailwind CSS', 'TypeScript',
-        'JavaScript', 'Git', 'Linux', 'REST API Development',
-    ],
-    hardWorker: true,
-    quickLearner: true,
-    problemSolver: true,
-    yearsOfExperience: 2 years,
-    projects: [
-        'Shoptick', 'Travelstick', 'Agencistick',
-        'Petstick', 'Taxstick', 'Medical Camp Management',
-    ],
-    hireable: function() {
-        return (
-            this.hardWorker &&
-            this.problemSolver &&
-            this.skills.length >= 10 &&
-            this.yearsOfExperience >= 2
-        );
-    }
-};
+    const profile = {
+        name: 'Din Mohammad Jewel',
+        title: 'Full-Stack Engineer | Software Engineer | Teacher',
+        skills: [
+            'React.js', 'Next.js', 'Node.js', 'Express.js',
+            'MongoDB', 'MySQL', 'Tailwind CSS', 'TypeScript',
+            'JavaScript', 'Git', 'Linux', 'REST API Development',
+        ],
+        hardWorker: true,
+        quickLearner: true,
+        problemSolver: true,
+        yearsOfExperience: 2,
+        projects: [
+            'Shoptick', 'Travelstick', 'Agencistick',
+            'Petstick', 'Taxstick', 'Medical Camp Management',
+        ],
+        hireable: function() {
+            return (
+                this.hardWorker &&
+                this.problemSolver &&
+                this.skills.length >= 10 &&
+                this.yearsOfExperience >= 2
+            );
+        }
+    };
   `);
 
   useEffect(() => {
@@ -149,7 +149,7 @@ const profile = {
 
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  💻 Full Stack Developer | 🛠️ Software Engineer | 📚 Teacher 🚀
+                  💻 Full Stack Engineer | 🛠️ Software Engineer | 📚 Teacher 🚀
                 </p>
               </div>
 
@@ -186,7 +186,7 @@ const profile = {
               <div className="hidden lg:block absolute right-10 top-20 animate-float">
                 <div className="px-4 py-2 rounded-lg bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 text-blue-400">
                   <i className="fas fa-code"></i>&nbsp;&nbsp;Full Stack
-                  Developer
+                  Engineer
                 </div>
               </div>
               <div className="hidden lg:block absolute top-[17rem] left-[70%] transform -translate-x-1/2 animate-float">
