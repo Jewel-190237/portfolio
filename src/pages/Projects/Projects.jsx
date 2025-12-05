@@ -5,7 +5,6 @@ import { ShineBorder } from "@/components/magicui/shine-border";
 import { ReactLenis } from "lenis/react";
 import { FaReact, FaNodeJs, FaAws } from "react-icons/fa";
 import { SiMongodb, SiExpress, SiTailwindcss, SiAntdesign, SiNextdotjs } from "react-icons/si";
-import { PiMagicWandBold } from "react-icons/pi";
 import { Cpu } from "lucide-react";
 import Marquee from "react-fast-marquee";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
@@ -47,7 +46,7 @@ const projects = [
   },
 
   {
-    name: "TaxkStick",
+    name: "Taxstick",
     heading:
       "Complete Task Filing Management System",
     image: "/tax.png",
@@ -65,20 +64,21 @@ const projects = [
     ],
   },
   {
-    name: "PathXFinder",
+    name: "Petstick",
     heading:
-      "E-Learning Platform with Workshop Management System",
-    image: "/path.png",
-    link: "https://pathxfinder.com/",
-    description: "An innovative e-learning platform that offers a comprehensive workshop management system. The platform features a user-friendly interface, allowing users to easily navigate through various functionalities, including course management, workshop scheduling, and participant registration. With its advanced search and filtering options, users can quickly locate specific courses or workshops, ensuring efficient organization and retrieval.",
+      "Complete Petshop Management System with pet care",
+    image: "/pet.png",
+    link: "https://petstick.appstick.com.bd",
+    description: "Petstick is a user-friendly platform that helps pet owners find and book services like grooming, training, veterinary care, boarding, and product purchases in one place. For businesses, it offers tools to manage appointments, track service requests, update products, and communicate with customers effectively. With its clean design and useful features, Petstick delivers a smooth and convenient experience for the pet-care community.",
     technologies: [
+      { name: "Next.js", icon: SiNextdotjs },
       { name: "React", icon: FaReact },
       { name: "Express.js", icon: SiExpress },
       { name: "MongoDB", icon: SiMongodb },
       { name: "Node.js", icon: FaNodeJs },
       { name: "Tailwind CSS", icon: SiTailwindcss },
       { name: "Ant Design", icon: SiAntdesign },
-      { name: "Magic UI", icon: PiMagicWandBold },
+      { name: "AWS", icon: FaAws },
     ],
   },
 ];

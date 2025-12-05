@@ -73,7 +73,7 @@ const SkillsSection = () => {
   const skillCategories = [
     {
       icon: Code2,
-      title: "Frontend Development",
+      title: "Frontend Engineer",
       color: "text-blue-400",
       skills: [
         { name: "React", icon: <FaReact className="w-4 h-4 text-[#61DAFB]" /> },
@@ -101,7 +101,7 @@ const SkillsSection = () => {
     },
     {
       icon: Database,
-      title: "Backend Development",
+      title: "Backend Engineer",
       color: "text-green-400",
       skills: [
         {

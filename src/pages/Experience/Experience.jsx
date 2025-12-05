@@ -84,7 +84,7 @@ const ExperienceSection = () => {
     },
     {
       icon: Code2,
-      title: "Full Stack Developer",
+      title: "Full Stack Engineer",
       company: "Freelance Projects",
       period: "2023 - Present",
       description:
