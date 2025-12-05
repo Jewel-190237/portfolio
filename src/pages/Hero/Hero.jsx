@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Prism from "prismjs";
 import "prismjs/components/prism-javascript";
 import "@/assets/css/tomorrow.css";
-import Meteors from "@/components/ui/meteors";
 import PortfolioPage from "@/pages/About/About";
 import SparklesText from "@/components/ui/sparkles-text";
 import { FlipWords } from "@/components/ui/flip-words";
@@ -43,41 +42,35 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-    "Full-Stack Developer",
     "Software Engineer",
+    "Full-Stack Developer",
     "React & Next.js Developer",
     "Node.js & Express Developer",
     "JavaScript Enthusiast",
   ];
-
-  // skills: [
-  //     'React', 'NextJS', 'Redux', 'Express',
-  //     'MySQL', 'MongoDB', 'Docker', 'AWS', 'TypeScript',
-  //     'GraphQL', 'Git', 'Linux', 'Discord Development'
-  // ],
   const [code] = useState(`
 const profile = {
     name: 'Din Mohammad Jewel',
     title: 'Full-Stack Developer | Software Engineer | Teacher',
     skills: [
-        'React.js', 'Next.js', 'Node.js', 'Express',
-        'MySQL', 'MongoDB', 'Tailwind CSS', 'TypeScript',
-        'JavaScript', 'Git', 'Linux', 'Discord Development'
+        'React.js', 'Next.js', 'Node.js', 'Express.js',
+        'MongoDB', 'MySQL', 'Tailwind CSS', 'TypeScript',
+        'JavaScript', 'Git', 'Linux', 'REST API Development',
     ],
     hardWorker: true,
     quickLearner: true,
     problemSolver: true,
-    yearsOfExperience: 1 year,
+    yearsOfExperience: 2 years,
     projects: [
-        'PetStick', 'Bus Ticket Management', 'TaxStick',
-        'Agencistick', 'Medical Camp Management', 'Portfolio Website',
+        'Shoptick', 'Travelstick', 'Agencistick',
+        'Petstick', 'Taxstick', 'Medical Camp Management',
     ],
     hireable: function() {
         return (
             this.hardWorker &&
             this.problemSolver &&
             this.skills.length >= 10 &&
-            this.yearsOfExperience >= 1
+            this.yearsOfExperience >= 2
         );
     }
 };
@@ -111,29 +104,13 @@ const profile = {
       <main className="pt-20 lg:pt-36 bg-[#020617] text-white min-h-screen">
         <section className="hero min-h-screen flex items-center relative px-4 sm:px-6 lg:px-8">
           <div className="absolute inset-0"></div>
-
-          {/* Choose one of these background options */}
           <GridBackground />
 
-          {/* Or keep the original backgrounds if you prefer */}
-          {/* <HexagonBackground /> */}
-          {/* <AnimatedGrid /> */}
-          {/* <DotBackground /> */}
-
-          {/* Meteors Effect */}
-          {/* <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <Meteors number={10} />
-          </div> */}
-
-          {/* Main content container */}
           <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10 py-12 lg:py-0">
-            {/* Left column - Text content */}
             <div className="w-full lg:w-1/2 mb-12 lg:mb-0 animate__animated animate__fadeInLeft relative">
-              {/* Decorative blurs */}
               <div className="absolute hidden lg:-top-20 lg:-left-20 lg:block w-48 h-48 lg:w-64 lg:h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
               <div className="absolute hidden lg:block lg:top-40 lg:-right-20 w-48 h-48 lg:w-64 lg:h-64 bg-teal-500/10 rounded-full blur-3xl"></div>
 
-              {/* Welcome badge */}
               <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 rounded-full bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 mb-6 sm:mb-8 animate__animated animate__fadeInDown animate__delay-1s">
                 <BorderBeam duration={8} size={100} />
                 <div className="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></div>
@@ -146,7 +123,6 @@ const profile = {
                 </span>
               </div>
 
-              {/* Name section */}
               <div className="relative mb-6 sm:mb-8">
                 <h1 className="text-xl sm:text-4xl lg:text-7xl font-bold leading-tight">
                   <span>Hello, I&apos;m</span>{" "}
@@ -161,7 +137,6 @@ const profile = {
                 <div className="absolute -z-10 top-1/2 -translate-y-1/2 left-1/4 w-24 sm:w-32 h-24 sm:h-32 bg-blue-500/20 rounded-full blur-2xl animate-pulse"></div>
               </div>
 
-              {/* Role badge */}
               <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s">
                 <i className="fas fa-rocket text-blue-400 animate-bounce text-sm sm:text-base"></i>
                 <span>
@@ -172,16 +147,13 @@ const profile = {
                 </span>
               </div>
 
-              {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
                   💻 Full Stack Developer | 🛠️ Software Engineer | 📚 Teacher 🚀
                 </p>
               </div>
 
-              {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate__animated animate__fadeInUp animate__delay-2s">
-                {/* View Projects Button */}
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -196,7 +168,6 @@ const profile = {
                   </span>
                 </a>
 
-                {/* Contact Button */}
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -212,13 +183,6 @@ const profile = {
                 </a>
               </div>
 
-              {/* Floating badges */}
-              {/* <div className="hidden lg:block absolute left-[5.5rem] top-[2.3rem] animate-float-slow">
-                <div className="px-4 py-2 rounded-lg bg-purple-500/10 backdrop-blur-sm border border-purple-500/20 text-purple-400">
-                  <i className="fas fa-wand-magic-sparkles"></i>&nbsp;&nbsp;UI
-                  Magic
-                </div>
-              </div> */}
               <div className="hidden lg:block absolute right-10 top-20 animate-float">
                 <div className="px-4 py-2 rounded-lg bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 text-blue-400">
                   <i className="fas fa-code"></i>&nbsp;&nbsp;Full Stack
@@ -233,7 +197,6 @@ const profile = {
               </div>
             </div>
 
-            {/* Right column - Code window */}
             <div className="w-full lg:w-1/2 animate__animated animate__fadeInDown animate__delay-0.1s">
               <div className="gradient-border">
                 <BorderBeam
