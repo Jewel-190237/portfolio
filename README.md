@@ -48,8 +48,8 @@ Feel free to reach out to me:
 
 - 📧 Email: 190237@ku.ac.bd  
 - 📱 Phone: 01980445424  
-- 💼 LinkedIn: [[linkedin.com/in/din-muhammad](https://www.linkedin.com/in/din-muhammad-jewel/](https://www.linkedin.com/in/jewel190237))  
-- 🌐 Portfolio: [https://portfolio-puce-five-81.vercel.app/]
+- 💼 LinkedIn: [https://www.linkedin.com/in/jewel190237]
+- 🌐 Portfolio: [https://din-muhammad.vercel.app]
 
 ---
 
