@@ -15,7 +15,7 @@ export default function FloatingContact() {
       link: isMobile
         ? "fb-messenger://user-thread/9589237667802861"
         : "https://www.facebook.com/messages/e2ee/t/9589237667802861",
-      color: "bg-[#0084FF]",
+      color: "bg-[#00C6FF]",
     },
     {
       name: "WhatsApp",
@@ -27,7 +27,7 @@ export default function FloatingContact() {
       name: "Call",
       icon: <FaPhone className="w-5 h-5" />,
       link: "tel:+8801980445424",
-      color: "bg-[#FF5E13]",
+      color: "bg-[#0B5CFF]",
     },
   ];
 
