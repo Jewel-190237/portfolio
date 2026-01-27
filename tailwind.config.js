@@ -58,7 +58,25 @@ module.exports = {
           "50%": { transform: "scale(1.2)", opacity: 0.6 },
           "100%": { transform: "scale(1)", opacity: 1 },
         },
-       
+
+        "center-wave": {
+          "0%": {
+            transform: "scale(0.6)",
+            opacity: "0.8",
+            boxShadow: "0 0 0 0 rgba(255,94,19,0.6)",
+          },
+          "70%": {
+            transform: "scale(1.8)",
+            opacity: "0.3",
+            boxShadow: "0 0 0 20px rgba(255,150,66,0.1)",
+          },
+          "100%": {
+            transform: "scale(2.2)",
+            opacity: "0",
+            boxShadow: "0 0 0 30px rgba(255,150,66,0)",
+          },
+        },
+
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -106,6 +124,10 @@ module.exports = {
           4: "hsl(var(--chart-4))",
           5: "hsl(var(--chart-5))",
         },
+      },
+      animation: {
+        scroll: 'scroll 4s linear infinite',
+        "center-wave": "center-wave 2.5s ease-out infinite",
       },
     },
   },
