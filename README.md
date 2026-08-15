@@ -1,56 +1,88 @@
-# Portfolio Website
-<div align="center">
-  <pre>
-    _____           _    __      _ _       
-   |  __ \         | |  / _|    | (_)      
-   | |__) |__  _ __| |_| |_ ___ | |_  ___  
-   |  ___/ _ \| '__| __|  _/ _ \| | |/ _ \ 
-   | |  | (_) | |  | |_| || (_) | | | (_) |
-   |_|   \___/|_|   \__|_| \___/|_|_|\___/ 
-  </pre>
-</div>
+# Din Muhammad Jewel — Developer Portfolio
 
- # 👋 Welcome to My Portfolio Website
-
-Hi, I'm **Din Muhammad** — a dedicated and passionate **MERN Stack Developer** and **Front-End Engineer**. This portfolio showcases my journey, skills, experience, education, and the projects I've worked on.
-
-## 🚀 About This Website
-
-This website is built using **React** and **Vite** to deliver a fast and modern web experience. It is designed to be responsive, accessible, and visually engaging using **Tailwind CSS** for styling.
-
-You can explore:
-
-- 🔧 My **technical skills** in JavaScript (ES6+), React, Next.js, Node.js, Express, MongoDB, and more
-- 👨‍💻 My **professional experience** as a front-end developer at **Assptick Limited**
-- 🎓 My **academic background** as a graduate of CSE from **Khulna University** and an **ICT Lecturer** at Akij Ideal School and College
-- 🧠 My **projects**, each aimed at solving real-world problems with clean code and effective design
-- 📬 How to **contact** me directly for collaboration, freelance work, or networking
-
-## 🛠️ Built With
-
-- [React](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [React Router](https://reactrouter.com/)
-- [MongoDB](https://www.mongodb.com/)
-
-## 🌐 Features
-
-- One-page layout for smooth scrolling navigation
-- Route-based navigation for dedicated section views
-- Fast load time and performance optimization using Vite
-- Modern, clean UI built with utility-first Tailwind CSS
-- Responsive design for all devices
-
-## 📫 Contact
-
-Feel free to reach out to me:
-
-- 📧 Email: 190237@ku.ac.bd  
-- 📱 Phone: 01980445424  
-- 💼 LinkedIn: [https://www.linkedin.com/in/jewel190237]
-- 🌐 Portfolio: [https://din-muhammad.vercel.app]
+A personal portfolio website built with React and Vite, showcasing my experience, skills, and projects as a Junior Software Engineer.
 
 ---
 
-Thanks for visiting my portfolio — I'm always open to collaboration, feedback, and exciting opportunities!
+## 🔗 Live Demo
+
+[View Portfolio](https://din-muhammad.vercel.app/)
+
+---
+
+## 🧑‍💻 About
+
+I'm **Din Muhammad Jewel**, a Junior Software Engineer at **TechOptions Limited** with a B.Sc. in Computer Science and Engineering from **Khulna University**. My primary focus is frontend development using React and Next.js, with an active transition into backend engineering with Python, FastAPI, and PostgreSQL.
+
+---
+
+## ✨ Features
+
+- Responsive design across all screen sizes
+- Animated UI with Framer Motion, Magic UI, and smooth scroll via Lenis
+- Sections: Hero, Skills, Experience, Projects, Education, Contact
+- EmailJS-powered contact form
+- Deployed on Vercel
+
+---
+
+## 🛠️ Tech Stack
+
+| Category       | Technologies                                      |
+| -------------- | ------------------------------------------------- |
+| Framework      | React 18, Vite                                    |
+| Styling        | Tailwind CSS, shadcn/ui                           |
+| Animation      | Framer Motion, Magic UI                           |
+| Icons          | Lucide React, React Icons                         |
+| Routing        | React Router DOM                                  |
+| Contact        | EmailJS                                           |
+| Deployment     | Vercel                                            |
+
+---
+
+## 📁 Project Structure
+
+```
+src/
+├── assets/          # Images and global CSS
+├── components/      # Reusable UI and Magic UI components
+├── pages/           # Section pages (Hero, About, Skills, Experience, Projects, Education, Contact)
+├── lib/             # Utility functions
+├── App.jsx          # Root component with routing
+└── main.jsx         # Entry point
+```
+
+---
+
+## 🚀 Getting Started
+
+**Prerequisites:** Node.js 18+ and pnpm
+
+```bash
+# Clone the repository
+git clone https://github.com/Jewel-190237/portfolio
+cd portfolio
+
+# Install dependencies
+pnpm install
+
+# Start development server
+pnpm dev
+
+# Build for production
+pnpm build
+```
+
+---
+
+## 📬 Contact
+
+- **Email:** jewel190237@gmail.com
+- **LinkedIn:** [https://www.linkedin.com/in/jewel190237](https://www.linkedin.com/in/jewel190237)
+- **GitHub:** [https://github.com/Jewel-190237](https://github.com/Jewel-190237)
+
+---
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
