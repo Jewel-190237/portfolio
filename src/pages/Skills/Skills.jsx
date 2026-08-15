@@ -16,6 +16,7 @@ import {
   FaWordpress,
   FaMagic,
   FaPython,
+  FaDocker,
 } from "react-icons/fa";
 import {
   SiNextdotjs,
@@ -167,10 +168,10 @@ const SkillsSection = () => {
       color: "text-orange-400",
       skills: [
         { name: "AWS", icon: <FaAws className="w-4 h-4 text-[#FF9900]" /> },
-        // {
-        //   name: "Docker",
-        //   icon: <FaDocker className="w-4 h-4 text-[#2496ED]" />,
-        // },
+        {
+          name: "Docker",
+          icon: <FaDocker className="w-4 h-4 text-[#2496ED]" />,
+        },
         { name: "CI/CD", icon: <FcWorkflow className="w-4 h-4" /> },
         // {
         //   name: "Kubernetes",
