@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import React from "react";
-import { Code2} from "lucide-react";
 import { RiLayoutMasonryLine } from "react-icons/ri";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
@@ -12,8 +11,10 @@ import { AnimatedGradientText } from "@/components/magicui/animated-gradient-tex
 const ExperienceCard = ({
   title,
   company,
+  link,
   period,
   description,
+  tags,
   icon: Icon,
 }) => (
   <div className="group relative overflow-hidden transform hover:-translate-y-2 transition-all duration-300">
@@ -28,19 +29,25 @@ const ExperienceCard = ({
       {/* Floating icon with pulse effect */}
       <ShineBorder shineColor={["#A07CFE", "#FE8FB5", "#FFBE7B"]} />
       <div className="relative mb-6 animate-bounce">
-        {/* <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500 to-blue-500 opacity-25 rounded-full blur-xl group-hover:opacity-75 animate-pulse transition-all duration-500" /> */}
         <Icon className="w-12 h-12 text-cyan-400 relative z-10 transform group-hover:rotate-12 transition-transform duration-300" />
       </div>
 
       {/* Content with improved typography */}
       <div className="space-y-3">
         <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-          <AnimatedGradientText  >
+          <AnimatedGradientText>
             {title}
           </AnimatedGradientText>
         </h3>
-        <div className="flex flex-col md:flex-row justify-between  text-gray-300">
-          <span className="font-semibold text-blue-400 text-center">{company}</span>
+        <div className="flex flex-col md:flex-row justify-between text-gray-300">
+          <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-blue-400 hover:text-cyan-400 transition-colors duration-200 text-center md:text-left"
+          >
+            {company}
+          </a>
           <span className="text-sm font-mono bg-blue-500/10 px-3 py-1 rounded-full text-center mt-2 md:mt-0">
             {period}
           </span>
@@ -48,6 +55,15 @@ const ExperienceCard = ({
         <p className="text-gray-300 border-l-4 border-blue-500/50 pl-4 mt-4 leading-relaxed">
           {description}
         </p>
+        {tags && (
+          <div className="flex flex-wrap gap-2 mt-4">
+            {tags.map((tag) => (
+              <span key={tag} className="text-xs px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300">
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* Decorative elements */}
@@ -69,26 +85,32 @@ const ExperienceSection = () => {
     {
       icon: FaReact,
       title: "Junior Software Engineer",
+      company: "TechOptions Limited",
+      link: "https://techoptionsbd.com/",
+      period: "2026 - Present",
+      description:
+        "Building responsive, performant web interfaces as a frontend-focused engineer. Working with React and Next.js to deliver scalable UI solutions, while actively expanding into backend development with Python, FastAPI, and PostgreSQL on the path to becoming a full-stack engineer.",
+      tags: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Python", "FastAPI"],
+    },
+    {
+      icon: FaReact,
+      title: "Junior Software Engineer",
       company: "Appstick Limited",
-      period: "2024 - Present",
+      link: "https://appstick.com.bd/",
+      period: "2024 - 2026",
       description:
         "Building and maintaining web applications, focusing on performance, scalability, and enhancing user experience with modern front-end technologies. Collaborating closely with cross-functional teams to deliver high-quality solutions.",
+      tags: ["React", "Next.js", "JavaScript", "Tailwind CSS"],
     },
     {
       icon: RiLayoutMasonryLine,
-      title: "Front-End Developer Internship",
-      company: "ICT Cell of Khulna University",
+      title: "Front-End Developer Intern",
+      company: "ICT Cell, Khulna University",
+      link: "https://ku.ac.bd/",
       period: "2022 - 2023",
       description:
-      "Contributed to building responsive user interfaces with modern front-end technologies. Worked with senior developers to enhance UI/UX and optimize web application performance.",
-    },
-    {
-      icon: Code2,
-      title: "Full Stack Engineer",
-      company: "Freelance Projects",
-      period: "2023 - Present",
-      description:
-      "Built full-stack web applications, developed reusable JavaScript libraries, and improved framework features to enhance performance and maintainability. Created and maintained reusable component , optimized backend APIs for performance and scalability",
+        "Contributed to building responsive user interfaces with modern front-end technologies. Collaborated with senior developers to enhance UI/UX and optimize web application performance.",
+      tags: ["HTML", "CSS", "JavaScript", "React"],
     },
   ];
 
