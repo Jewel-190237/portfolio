@@ -53,7 +53,7 @@ export default function Hero() {
         name: 'Din Mohammad Jewel',
         title: 'Full-Stack Engineer | Software Engineer | Teacher',
         skills: [
-            'React.js', 'Next.js', 'Node.js', 'Express.js',
+            'React.js', 'Next.js', 'Node.js', 'Express.js', 'Python',
             'MongoDB', 'MySQL', 'Tailwind CSS', 'TypeScript',
             'JavaScript', 'Git', 'Linux', 'REST API Development',
         ],
