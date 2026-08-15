@@ -15,6 +15,7 @@ import {
   FaAws,
   FaWordpress,
   FaMagic,
+  FaPython,
 } from "react-icons/fa";
 import {
   SiNextdotjs,
@@ -29,6 +30,7 @@ import {
   SiAntdesign,
   SiDaisyui,
   SiMaterialdesignicons,
+  SiPostgresql,
 } from "react-icons/si";
 import { TbBrandVscode } from "react-icons/tb";
 import { BsFileEarmarkCode, BsGrid1X2 } from "react-icons/bs";
@@ -108,14 +110,6 @@ const SkillsSection = () => {
           name: "Node.js",
           icon: <FaNodeJs className="w-4 h-4 text-[#339933]" />,
         },
-        // {
-        //   name: "Python",
-        //   icon: <FaPython className="w-4 h-4 text-[#3776AB]" />,
-        // },
-        // {
-        //   name: "PostgreSQL",
-        //   icon: <SiPostgresql className="w-4 h-4 text-[#336791]" />,
-        // },
         {
           name: "MongoDB",
           icon: <SiMongodb className="w-4 h-4 text-[#47A248]" />,
@@ -124,7 +118,14 @@ const SkillsSection = () => {
           name: "Express.js",
           icon: <BsFileEarmarkCode className="w-4 h-4 text-[#2da1e4]" />,
         },
-          // icon: <SiMongodb className="w-4 h-4 text-[#47A248]" />,
+        {
+          name: "Python",
+          icon: <FaPython className="w-4 h-4 text-[#3776AB]" />,
+        },
+        {
+          name: "PostgreSQL",
+          icon: <SiPostgresql className="w-4 h-4 text-[#336791]" />,
+        },
         {
           name: "REST APIs",
           icon: <BsGrid1X2 className="w-4 h-4 text-[#FF6C37]" />,
