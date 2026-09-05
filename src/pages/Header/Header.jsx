@@ -9,6 +9,7 @@ import {
   FaCode,
   FaEnvelope,
   FaBars,
+  FaTimes,
   FaBriefcaseMedical,
 } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
@@ -62,16 +63,17 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <div className="flex justify-between items-center md:hidden px-2">
               <Link to="/" className="text-white font-bold">Portfolio</Link>
-              <button 
+              <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-white p-2"
+                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                className="text-white p-2 transition-transform duration-300"
               >
-                <FaBars />
+                {isMenuOpen ? <FaTimes className="text-xl" /> : <FaBars className="text-xl" />}
               </button>
             </div>
 
             {/* Navigation Links */}
-            <div className={`${isMenuOpen ? 'block' : 'hidden'} md:block  z-20`}>
+            <div className={`md:block z-20 overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 md:max-h-full md:opacity-100'}`}>
               <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-1 lg:gap-2 py-4 md:py-0">
                 {navLinks.map(({ id, icon: Icon, text, path }) => (
                   <Link
