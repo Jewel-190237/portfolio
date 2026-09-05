@@ -2,8 +2,9 @@ import { useState } from "react";
 import { Send, MapPin, Mail } from "lucide-react";
 import { BorderBeam } from "@/components/magicui/border-beam";
 import { ToastContainer, toast } from 'react-toastify';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import { FaWhatsapp } from "react-icons/fa";
+
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
@@ -13,6 +14,8 @@ export default function Contact() {
   });
 
   const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const validateForm = () => {
     let tempErrors = {};
     let isValid = true;
@@ -52,28 +55,28 @@ export default function Contact() {
       return;
     }
 
+    setIsSubmitting(true);
     emailjs
       .send(
-        'service_6e81197',
-        'template_pjl1nfd',
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         formData,
-        'vGyvHNpbS_ximT6EO'
+        { publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY }
       )
       .then(
         () => {
-          toast.success("Thank you for reaching out! I’ll get back to you as soon as possible.");
+          toast.success("Thank you for reaching out! I'll get back to you as soon as possible.");
           setFormData({ name: "", email: "", subject: "", message: "" });
         },
         (error) => {
           toast.error(error);
         }
-      );
+      )
+      .finally(() => setIsSubmitting(false));
   };
 
   return (
-    <main
-      className="pt-10 pb-10 lg:pt-[0rem] bg-[#04081A] text-white min-h-screen overflow-hidden"
-    >
+    <main className="pt-10 pb-10 lg:pt-[0rem] bg-[#04081A] text-white min-h-screen overflow-hidden">
       <section className="hero min-h-screen flex items-center relative px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -91,37 +94,35 @@ export default function Contact() {
               <div className="space-y-6">
                 <div className="flex items-center space-x-4">
                   <div className="bg-purple-500/10 p-3 rounded-lg">
-                    <Mail className="w-6 h-6 text-purple-400" />
+                    <Mail className="w-6 h-6 text-purple-400" aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="font-semibold">Email</h3>
                     <a
                       href="mailto:190237@ku.ac.bd"
-                      className="text-gray-400 hover:text-purple-400 underline underline-offset-2 transaction-colors duration-300"
+                      className="text-gray-400 hover:text-purple-400 underline underline-offset-2 transition-colors duration-300"
                     >
                       190237@ku.ac.bd
                     </a>
                   </div>
-
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="bg-green-500/10 p-3 rounded-lg">
-                    <FaWhatsapp className="w-6 h-6 text-green-400" />
+                    <FaWhatsapp className="w-6 h-6 text-green-400" aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="font-semibold">Phone Number</h3>
                     <a
                       href="tel:+8801980445424"
-                      className="text-gray-400 hover:text-green-400 underline underline-offset-2 transaction-colors duration-300"
+                      className="text-gray-400 hover:text-green-400 underline underline-offset-2 transition-colors duration-300"
                     >
                       +8801980445424
                     </a>
                   </div>
-
                 </div>
                 <div className="flex items-center space-x-4">
                   <div className="bg-pink-500/10 p-3 rounded-lg">
-                    <MapPin className="w-6 h-6 text-pink-400" />
+                    <MapPin className="w-6 h-6 text-pink-400" aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="font-semibold">Location</h3>
@@ -134,12 +135,13 @@ export default function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://drive.google.com/file/d/1JbXGjs3njunqxf0Wc6dCiVsAOqCJ_epY/view"
+                  aria-label="Download my resume"
                   className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-teal-400">
                     <span className="relative flex items-center justify-center gap-2 text-white font-medium">
                       <span>Get Resume</span>
-                      <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
+                      <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1" aria-hidden="true"></i>
                     </span>
                   </span>
                 </a>
@@ -155,79 +157,58 @@ export default function Contact() {
                     <input
                       type="text"
                       placeholder="Your Name"
-                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${errors.name ? "border-red-500" : "border-gray-700"
-                        } focus:border-blue-500 focus:outline-none transition-colors`}
+                      aria-label="Your Name"
+                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${errors.name ? "border-red-500" : "border-gray-700"} focus:border-blue-500 focus:outline-none transition-colors`}
                       value={formData.name}
-                      onChange={(e) =>
-                        setFormData({ ...formData, name: e.target.value })
-                      }
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     />
-                    {errors.name && (
-                      <p className="text-red-500 text-sm mt-1">{errors.name}</p>
-                    )}
+                    {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
                   </div>
 
                   <div>
                     <input
                       type="email"
                       placeholder="Your Email"
-                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${errors.email ? "border-red-500" : "border-gray-700"
-                        } focus:border-blue-500 focus:outline-none transition-colors`}
+                      aria-label="Your Email"
+                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${errors.email ? "border-red-500" : "border-gray-700"} focus:border-blue-500 focus:outline-none transition-colors`}
                       value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     />
-                    {errors.email && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {errors.email}
-                      </p>
-                    )}
+                    {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
                   </div>
 
                   <div>
                     <input
                       type="text"
                       placeholder="Subject"
-                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${errors.subject ? "border-red-500" : "border-gray-700"
-                        } focus:border-blue-500 focus:outline-none transition-colors`}
+                      aria-label="Subject"
+                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${errors.subject ? "border-red-500" : "border-gray-700"} focus:border-blue-500 focus:outline-none transition-colors`}
                       value={formData.subject}
-                      onChange={(e) =>
-                        setFormData({ ...formData, subject: e.target.value })
-                      }
+                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                     />
-                    {errors.subject && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {errors.subject}
-                      </p>
-                    )}
+                    {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject}</p>}
                   </div>
 
                   <div>
                     <textarea
                       placeholder="Your Message"
+                      aria-label="Your Message"
                       rows="4"
-                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${errors.message ? "border-red-500" : "border-gray-700"
-                        } focus:border-blue-500 focus:outline-none transition-colors resize-none`}
+                      className={`w-full px-4 py-3 rounded-lg bg-white/5 border ${errors.message ? "border-red-500" : "border-gray-700"} focus:border-blue-500 focus:outline-none transition-colors resize-none`}
                       value={formData.message}
-                      onChange={(e) =>
-                        setFormData({ ...formData, message: e.target.value })
-                      }
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     ></textarea>
-                    {errors.message && (
-                      <p className="text-red-500 text-sm mt-1">
-                        {errors.message}
-                      </p>
-                    )}
+                    {errors.message && <p className="text-red-500 text-sm mt-1">{errors.message}</p>}
                   </div>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white py-3 px-6 rounded-lg font-semibold flex items-center justify-center space-x-2 hover:opacity-90 transition-opacity disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  <span>Send Message</span>
-                  <Send className="w-4 h-4" />
+                  <span>{isSubmitting ? "Sending..." : "Send Message"}</span>
+                  <Send className="w-4 h-4" aria-hidden="true" />
                 </button>
               </form>
             </div>

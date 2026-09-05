@@ -1,5 +1,4 @@
-/* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Prism from "prismjs";
 import "prismjs/components/prism-javascript";
 import "@/assets/css/tomorrow.css";
@@ -8,6 +7,7 @@ import SparklesText from "@/components/ui/sparkles-text";
 import { FlipWords } from "@/components/ui/flip-words";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { BorderBeam } from "@/components/magicui/border-beam";
+
 const GridBackground = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
@@ -48,6 +48,7 @@ export default function Hero() {
     "Node.js & Express Engineer",
     "JavaScript Enthusiast",
   ];
+
   const [code] = useState(`
     const profile = {
         name: 'Din Mohammad Jewel',
@@ -78,25 +79,6 @@ export default function Hero() {
 
   useEffect(() => {
     Prism.highlightAll();
-
-    // Add CSS animation for grid and dots
-    const style = document.createElement("style");
-    style.textContent = `
-      @keyframes gridPulse {
-        0%, 100% { opacity: 0.1; }
-        50% { opacity: 0.3; }
-      }
-      
-      @keyframes dotPulse {
-        0%, 100% { opacity: 0.2; transform: scale(0.8); }
-        50% { opacity: 0.5; transform: scale(1.2); }
-      }
-    `;
-    document.head.appendChild(style);
-
-    return () => {
-      document.head.removeChild(style);
-    };
   }, [code]);
 
   return (
@@ -129,7 +111,7 @@ export default function Hero() {
                   <br className="flex sm:block" />
                   <span className="relative inline-block">
                     <SparklesText
-                      className="text-blue-400  text-4xl sm:text-4xl lg:text-7xl font-bold leading-tight"
+                      className="text-blue-400 text-4xl sm:text-4xl lg:text-7xl font-bold leading-tight"
                       text="Din Muhammad"
                     />
                   </span>
@@ -138,7 +120,7 @@ export default function Hero() {
               </div>
 
               <div className="inline-flex items-center gap-2 sm:gap-3 px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl bg-gradient-to-r from-blue-500/10 to-teal-500/10 border border-blue-500/20 mb-6 sm:mb-8 backdrop-blur-sm animate__animated animate__fadeInUp animate__delay-1s">
-                <i className="fas fa-rocket text-blue-400 animate-bounce text-sm sm:text-base"></i>
+                <i className="fas fa-rocket text-blue-400 animate-bounce text-sm sm:text-base" aria-hidden="true"></i>
                 <span>
                   <FlipWords
                     className={"text-lg sm:text-xl text-blue-400 font-medium"}
@@ -158,26 +140,27 @@ export default function Hero() {
                   target="_blank"
                   rel="noopener noreferrer"
                   href="https://drive.google.com/file/d/1JbXGjs3njunqxf0Wc6dCiVsAOqCJ_epY/view"
+                  aria-label="Download my resume"
                   className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-teal-400">
                     <span className="relative flex items-center justify-center gap-2 text-white font-medium">
                       <span>Get Resume</span>
-                      <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1"></i>
+                      <i className="fas fa-arrow-right transform transition-all duration-300 group-hover:translate-x-1" aria-hidden="true"></i>
                     </span>
                   </span>
                 </a>
 
                 <a
-                  target="_blank"
                   rel="noopener noreferrer"
                   href="/contact"
+                  aria-label="Contact me"
                   className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
                     <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white">
                       <span>Contact Me</span>
-                      <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12"></i>
+                      <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12" aria-hidden="true"></i>
                     </span>
                   </span>
                 </a>
@@ -185,14 +168,12 @@ export default function Hero() {
 
               <div className="hidden lg:block absolute right-10 top-20 animate-float">
                 <div className="px-4 py-2 rounded-lg bg-blue-500/10 backdrop-blur-sm border border-blue-500/20 text-blue-400">
-                  <i className="fas fa-code"></i>&nbsp;&nbsp;Full Stack
-                  Engineer
+                  <i className="fas fa-code" aria-hidden="true"></i>&nbsp;&nbsp;Full Stack Engineer
                 </div>
               </div>
               <div className="hidden lg:block absolute top-[17rem] left-[70%] transform -translate-x-1/2 animate-float">
                 <div className="px-4 py-2 rounded-lg bg-amber-500/10 backdrop-blur-sm border border-amber-500/20 text-amber-400">
-                  <i className="fas fa-lightbulb"></i>&nbsp;&nbsp;Software
-                  Engineer
+                  <i className="fas fa-lightbulb" aria-hidden="true"></i>&nbsp;&nbsp;Software Engineer
                 </div>
               </div>
             </div>
@@ -211,7 +192,7 @@ export default function Hero() {
                     <div className="window-dot bg-yellow-500"></div>
                     <div className="window-dot bg-green-500"></div>
                     <span className="ml-2 text-sm text-gray-400 flex items-center gap-2">
-                      <i className="fas fa-code"></i>
+                      <i className="fas fa-code" aria-hidden="true"></i>
                       developer.js
                     </span>
                   </div>
